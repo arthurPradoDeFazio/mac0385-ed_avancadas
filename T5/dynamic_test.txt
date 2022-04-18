@@ -1,0 +1,29 @@
+t = ADS()
+t.insert(sst.Interval(0, 3, True, True)) # (0,3)
+print(t.segments(0))
+print(t.segments(1.5))
+print(t.segments(8))
+print(t.segments(19))
+print(t.segments(26))
+print(t.segments(11))
+t.insert(sst.Interval(5, 8, False, True)) # [5, 8)
+t.insert(sst.Interval(6, 10, True, True)) # (6, 10)
+t.insert(sst.Interval(8, 9, True, False)) # (8, 9]
+t.insert(sst.Interval(15,23, True, False)) # (15, 23]
+t.insert(sst.Interval(16,21, True, False)) # (16, 21]
+print(t.segments(0))
+print(t.segments(1.5))
+print(t.segments(8))
+print(t.segments(19))
+print(t.segments(26))
+print(t.segments(11))
+t.insert(sst.Interval(17,19, False, False)) # [17, 19]
+t.insert(sst.Interval(19,20, False, False)) # [19, 20]
+t.insert(sst.Interval(25,30, False, True)) # [25, 30)
+t.insert(sst.Interval(26,26, False, False)) # [26, 26]
+print(t.segments(0))
+print(t.segments(1.5))
+print(t.segments(8))
+print(t.segments(19))
+print(t.segments(26))
+print(t.segments(11))

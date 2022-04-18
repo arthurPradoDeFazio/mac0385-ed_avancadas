@@ -1,0 +1,29 @@
+h = Heap()
+h.insert_insert(1, 20)
+h.insert_insert(2, 24)
+h.insert_insert(3, 12)
+h.insert_insert(4, 8)
+h.insert_insert(5, 4)
+h.print()
+h.insert_delete(6) # sai o 4
+h.print()
+h.insert_insert(8, 6)
+h.print()
+h.insert_delete(13)
+h.print()
+h.delete_delete(6) # entra 6 de novo
+h.print()
+h.delete_insert(5) # sarem 
+h.print()
+h.insert_delete(14) # sai 8
+h.print()
+h.insert_delete(15) # sai 12
+h.print()
+h.insert_delete(16) # sai 20
+h.print()
+h.delete_delete(13) # volta 20
+h.print()
+h.delete_insert(8) # sai 20 de novo
+h.print()
+h.delete_insert(4) # heap vazio
+h.print()

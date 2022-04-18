@@ -1,0 +1,19 @@
+intervals = []
+intervals.append(sst.Interval(0, 3, True, True)) # (0,3)
+intervals.append(sst.Interval(5, 8, False, True)) # [5, 8)
+intervals.append(sst.Interval(6, 10, True, True)) # (6, 10)
+intervals.append(sst.Interval(8, 9, True, False)) # (8, 9]
+intervals.append(sst.Interval(15,23, True, False)) # (15, 23]
+intervals.append(sst.Interval(16,21, True, False)) # (16, 21]
+intervals.append(sst.Interval(17,19, False, False)) # [17, 19]
+intervals.append(sst.Interval(19,20, False, False)) # [19, 20]
+intervals.append(sst.Interval(25,30, False, True)) # [25, 30)
+intervals.append(sst.Interval(26,26, False, False)) # [26, 26]
+t = AS(intervals)
+t.print()
+print(t.segments(0))
+print(t.segments(1.5))
+print(t.segments(8))
+print(t.segments(19))
+print(t.segments(26))
+print(t.segments(11))
